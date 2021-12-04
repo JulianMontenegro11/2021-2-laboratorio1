@@ -18,14 +18,14 @@ int main()
 
     case 2:
         int billete_50,billete_20,billete_10,billete_5,billete_2,billete_1,moneda_500,moneda_200,moneda_100,moneda_50,faltante;
-        cout<<"Ejercicio 2:"<<endl;
+        cout<<"Problema 2:"<<endl;
         cout<<endl;
-        cout<<"Se necesita un programa que permita determinar la mínima combinación de billetes"<<endl;
-        cout<<"y monedas para una cantidad de dinero determinada. Los billetes en circulación son de $50.000,"<<endl;
-        cout<<"$20.000, $10.000, $5.000, $2.000 y $1.000, y las monedas son de $500, $200, $100 y $50."<<endl;
-        cout<<"Hacer un programa que entregue el número de billetes y monedas de cada denominación para completar"<<endl;
-        cout<<"la cantidad deseada. Si por medio de los billetes y monedas disponibles no se puede lograr la"<<endl;
-        cout<<"cantidad deseada, el sistema deberá decir lo que resta para lograrla."<<endl;
+        cout<<"Se necesita un programa que permita determinar la mínima combinación de billetes y monedas para "<<endl;
+        cout<<"una cantidad de dinero determinada. Los billetes en circulación son de $50.000, $20.000, $10.000, "<<endl;
+        cout<<"$5.000, $2.000 y $1.000, y las monedas son de $500, $200, $100 y $50. Hacer un programa que "<<endl;
+        cout<<"entregue el número de billetes y monedas de cada denominación para completar la cantidad "<<endl;
+        cout<<"deseada. Si por medio de los billetes y monedas disponibles no se puede lograr la cantidad deseada, "<<endl;
+        cout<<"el sistema deberá decir lo que resta para lograrla."<<endl;
         cout<<endl;
         cout<<"Ingrese el valor a procesar: "<<endl;
         cin>>valor;
@@ -63,6 +63,42 @@ int main()
         cout<<"Cantidad de monedas de 100 = "<<moneda_100<<endl;
         cout<<"Cantidad de monedas de 50 = "<<moneda_50<<endl;
         cout<<"Faltante = "<<faltante<<endl;
+
+
+    break;
+
+    case 3:
+        int mes,dia;
+
+        cout<<"Problema 3"<<endl;
+        cout<<endl;
+        cout<<"Escriba un programa que debe leer un mes y un día de dicho mes para luego decir si esa "<<endl;
+        cout<<"combinación de mes y día son válidos. El caso más especial es el 29 de febrero, en dicho caso "<<endl;
+        cout<<"imprimir “posiblemente año bisiesto”."<<endl;
+        cout<<endl;
+        cout<<"Por favor ingrese el mes : ";
+        cin>>mes;
+        while(mes<1||mes>12){
+            cout<<"Mes invalido, por favor vuelva a intentarlo :";
+            cin>>mes;
+        }
+        cout<<"Por favor ingrese el dia : ";
+        cin>>dia;
+        while(dia<1||dia>31){
+            cout<<"Dia invalido, por favor vuelva a intentarlo : ";
+            cin>>dia;
+        }
+        if(mes==2&&dia==29){ cout<<dia<<"/"<<mes<<" "<<"Es una fecha valida en anio bisiesto"<<endl; } //año bisiesto
+        else if(mes==2&&dia>29) {cout<<dia<<"/"<<mes<<" "<<"Es una fecha invalida"<<endl; }  //mes de febrero
+        else if(mes==4&&dia>30) {cout<<dia<<"/"<<mes<<" "<<"Es una fecha invalida"<<endl; }  //mes de abril
+        else if(mes==6&&dia>30) {cout<<dia<<"/"<<mes<<" "<<"Es una fecha invalida"<<endl; } //mes de junio
+        else if(mes==9&&dia>30) {cout<<dia<<"/"<<mes<<" "<<"Es una fecha invalida"<<endl; }  //mes de septiembre
+        else if(mes==11&&dia>30){cout<<dia<<"/"<<mes<<" "<<"Es una fecha invalida"<<endl; }  //mes de Noviembre
+
+        else {cout<<dia<<"/"<<mes<<" "<<"Es una fecha valida"<<endl;}
+
+
+
 
 
     break;
