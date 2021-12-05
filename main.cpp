@@ -72,7 +72,7 @@ int main()
             cout<<endl;
             cout<<"¿Desea validar otro programa?, oprima la letra 'Y' si desea continuar, oprima la letra 'N' si desea salir :";
             cin>>Con;
-            if (Con=='Y'){
+            if (Con=='Y'|| Con=='y'){
                 continuar=true;
             }
             else continuar=false;
@@ -113,7 +113,7 @@ int main()
             cout<<endl;
             cout<<"¿Desea validar otro programa?, oprima la letra 'Y' si desea continuar, oprima la letra 'N' si desea salir :";
             cin>>Con;
-            if (Con=='Y'){
+            if (Con=='Y'|| Con=='y'){
                 continuar=true;
             }
             else continuar=false;
@@ -197,7 +197,7 @@ int main()
             cout<<endl;
             cout<<"¿Desea validar otro programa?, oprima la letra 'Y' si desea continuar, oprima la letra 'N' si desea salir :";
             cin>>Con;
-            if (Con=='Y'){
+            if (Con=='Y'||Con=='y'){
                 continuar=true;
             }
             else continuar=false;
