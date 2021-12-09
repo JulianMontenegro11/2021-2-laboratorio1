@@ -174,7 +174,7 @@ int main()
                 espacio=espacio-1;
             }
 
-                espacio=espacio+2;
+                espacio=espacio+2;               // Se acomodan valores para iniciar a imprimir la parte inferior
                 inicio=inicio-4;
             for(int i=1;i<=espacio_inicio;i++){   //for para realizar la parte inferior de la estrella
 
@@ -207,8 +207,54 @@ int main()
 
         break;
 
-        }
 
-    }
+        case 7:
+            cout<<"Problema 7"<<endl;
+            cout<<endl;
+            cout<<"En la serie de Fibonacci, cada número es la suma de los 2 anteriores e inicia con 1 y"<<endl;
+            cout<<"1. Ej: 1, 1, 2, 3, 5, 8, ...."<<endl;
+            cout<<"Escriba un programa que reciba un número n y halle la suma de todos los números pares en la serie"<<endl;
+            cout<<"de Fibonacci menores a n."<<endl;
+            cout<<endl;
+            cout<<"Ingrese un numero"<<endl;
+            cin>>valor;
+
+            int nuevo=0,anterior_1=1,anterior_2=0,total=0;
+            while(nuevo<=valor){
+                if(anterior_2==0){
+                    nuevo=anterior_1+anterior_1;
+                    anterior_2=anterior_1;
+                }else{
+                    anterior_2=anterior_1;
+                    anterior_1=nuevo;
+                    nuevo=anterior_1+anterior_2;
+                }
+                if(nuevo%2==0){
+                    total=total+nuevo;
+                }
+
+            }
+            cout<<"El resultado de la suma es = "<<total<<endl;
+            cout<<endl;
+
+            cout<<endl;
+            cout<<"¿Desea validar otro programa?, oprima la letra 'Y' si desea continuar, oprima la letra 'N' si desea salir :";
+            cin>>Con;
+            if (Con=='Y'||Con=='y'){
+                continuar=true;
+            }
+            else continuar=false;
+
+
+
+
+        break;
+
+
+
+
+        }   // final del switch
+
+    }  // final del bucle del menu
     return 0;
 }
