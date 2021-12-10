@@ -4,6 +4,9 @@ using namespace std;
 
 int main()
 {
+
+    cout<<"Informatica 2  //  Julian Montenegro"<<endl;
+    cout<<endl;
     bool continuar=true;
     char Con;
 
@@ -299,7 +302,7 @@ int main()
         case 10:{
             cout<<"Problema 10"<<endl;
             cout<<endl;
-            cout<<"Escriba un programa que reciba un número n e imprima el enésimo número primo."<<endl;
+            cout<<"Escriba un programa que reciba un numero n e imprima el enesimo numero primo."<<endl;
             cout<<endl;
             cout<<"Ingrese el valor de n: ";
             cin>>valor;
