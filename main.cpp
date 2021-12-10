@@ -296,6 +296,48 @@ int main()
 
             break;
 
+        case 10:{
+            cout<<"Problema 10"<<endl;
+            cout<<endl;
+            cout<<"Escriba un programa que reciba un número n e imprima el enésimo número primo."<<endl;
+            cout<<endl;
+            cout<<"Ingrese el valor de n: ";
+            cin>>valor;
+            int contador_1=0,contador_2=0,numero;
+
+            for(int j=1;contador_2<valor;){
+            contador_1=0;
+            for(int i=1;i<=j;i++){
+                if(j%i==0){
+                    contador_1++;
+                }
+                if(i==j){
+                if(contador_1==2){
+                    contador_2++;
+                    contador_1=0;
+                }
+                        } //final if i=j
+            }
+            j++;
+            if(contador_2==valor) numero=j-1;
+
+            } // fina del for principal
+            cout<<"El enesimo numero primo es: "<<numero<<endl;
+
+            cout<<endl;
+
+            cout<<endl;
+            cout<<"¿Desea validar otro programa?, oprima la letra 'Y' si desea continuar, oprima la letra 'N' si desea salir :";
+            cin>>Con;
+            if (Con=='Y'||Con=='y'){
+                continuar=true;
+            }
+            else continuar=false;
+
+        } // Final del caso 10
+
+            break;
+
 
 
 
