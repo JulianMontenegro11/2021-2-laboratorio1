@@ -22,7 +22,7 @@ int main()
         cin>>a;
         switch (a) {
 
-        case 2:
+        case 2:{
             int billete_50,billete_20,billete_10,billete_5,billete_2,billete_1,moneda_500,moneda_200,moneda_100,moneda_50,faltante;
             cout<<"Problema 2:"<<endl;
             cout<<endl;
@@ -75,12 +75,12 @@ int main()
             if (Con=='Y'|| Con=='y'){
                 continuar=true;
             }
-            else continuar=false;
+            else continuar=false;} //final caso 2
 
 
         break;
 
-        case 3:
+        case 3:{
             int mes,dia;
 
             cout<<"Problema 3"<<endl;
@@ -116,7 +116,7 @@ int main()
             if (Con=='Y'|| Con=='y'){
                 continuar=true;
             }
-            else continuar=false;
+            else continuar=false;} // final caso 3
 
 
 
@@ -124,7 +124,7 @@ int main()
 
         break;
 
-        case 5:
+        case 5:{
             int inicio, espacio,espacio_inicio;
             cout<<"Problema 5 :"<<endl;
             cout<<endl;
@@ -200,7 +200,7 @@ int main()
             if (Con=='Y'||Con=='y'){
                 continuar=true;
             }
-            else continuar=false;
+            else continuar=false;}//final caso 5
 
 
 
@@ -208,12 +208,12 @@ int main()
         break;
 
 
-        case 7:
+        case 7:{
             cout<<"Problema 7"<<endl;
             cout<<endl;
             cout<<"En la serie de Fibonacci, cada número es la suma de los 2 anteriores e inicia con 1 y"<<endl;
             cout<<"1. Ej: 1, 1, 2, 3, 5, 8, ...."<<endl;
-            cout<<"Escriba un programa que reciba un número n y halle la suma de todos los números pares en la serie"<<endl;
+            cout<<"Escriba un programa que reciba un numero n y halle la suma de todos los numeros pares en la serie"<<endl;
             cout<<"de Fibonacci menores a n."<<endl;
             cout<<endl;
             cout<<"Ingrese un numero"<<endl;
@@ -243,12 +243,59 @@ int main()
             if (Con=='Y'||Con=='y'){
                 continuar=true;
             }
-            else continuar=false;
+            else continuar=false;} // final caso 7
 
 
 
 
         break;
+        case 9:{
+            cout<<"Problema 9"<<endl;
+            cout<<endl;
+            cout<<"Escriba un programa que pida un numero entero N e imprima el resultado de la suma"<<endl;
+            cout<<"de todos sus digitos elevados a si mismos."<<endl;
+            cout<<endl;
+            cout<<"ingrese el numero : ";
+            cin>>valor;
+            cout<<endl;
+            int multiplicar,total=0,digito;
+            while(valor!=0){
+                digito=valor%10;
+                valor=valor/10;
+
+                for(int i=1;i<digito;i++){
+                    if(i==1){
+                    multiplicar=digito*digito;}
+                    else{
+                        multiplicar=multiplicar*digito;
+                    }
+                }
+                if(digito==1){
+                    multiplicar=1;
+                }
+                total=total+multiplicar;
+
+                if(valor%10==0 && valor/10==0){
+
+                    cout<<"El resultado de la suma es ="<<total<<endl;
+                    break;
+                }
+
+            }
+
+            cout<<endl;
+            cout<<"¿Desea validar otro programa?, oprima la letra 'Y' si desea continuar, oprima la letra 'N' si desea salir :";
+            cin>>Con;
+            if (Con=='Y'||Con=='y'){
+                continuar=true;
+            }
+            else continuar=false;
+
+
+        } //final caso nueve
+
+            break;
+
 
 
 
