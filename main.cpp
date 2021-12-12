@@ -341,6 +341,90 @@ int main()
 
             break;
 
+        case 11:{
+            bool stop=false;
+            int multi=1,num,aux,residuo=0,MCD=1;
+            cout<<"Problema 11"<<endl;
+            cout<<endl;
+            cout<<"Escriba un programa que reciba un número y calcule el mínimo común múltiplo de"<<endl;
+            cout<<"todos los números enteros entre 1 y el número ingresado."<<endl;
+            cout<<endl;
+            cout<<"Ingrese el numero que desea"<<endl;
+            cin>>num;
+
+            for(int i=2;i<=num;i++){
+                multi=multi*i;
+                aux=i;
+
+                do{
+                    residuo=MCD%aux;
+                    MCD=aux;
+                    aux=residuo;
+
+                }while (residuo!=0);
+
+
+
+
+
+            } // final for
+
+            cout<<endl;
+            cout<<"¿Desea validar otro programa?, oprima la letra 'Y' si desea continuar, oprima la letra 'N' si desea salir :";
+            cin>>Con;
+            if (Con=='Y'||Con=='y'){
+                continuar=true;
+            }
+            else continuar=false;
+
+
+        } //final caso 11
+
+            break;
+
+        case 13:{
+            cout<<"Problema 13"<<endl;
+            cout<<endl;
+            cout<<"Escriba un programa que reciba un número y calcule la suma de todos los primos"<<endl;
+            cout<<"menores que el número ingresado."<<endl;
+            cout<<endl;
+            cout<<"Ingrese el numero"<<endl;
+            cin>>valor;
+            int contador_1=0,contador_2=0,numero=0;
+
+            for(int j=1;j<valor;){
+            contador_1=0;
+            for(int i=1;i<=j;i++){
+                if(j%i==0){
+                    contador_1++;
+                }
+                if(i==j){
+                if(contador_1==2){
+
+                    contador_1=0;
+                    numero=numero+j;
+                }
+             }
+                }
+            j++;
+            if(valor<=j){
+                cout<<"La suma de los primos menores es :"<<numero<<endl; }
+
+                }
+
+            cout<<endl;
+            cout<<"¿Desea validar otro programa?, oprima la letra 'Y' si desea continuar, oprima la letra 'N' si desea salir :";
+            cin>>Con;
+            if (Con=='Y'||Con=='y'){
+                continuar=true;
+            }
+            else continuar=false;
+
+
+        } //final caso 13
+
+            break;
+
 
 
 
@@ -350,3 +434,4 @@ int main()
     }  // final del bucle del menu
     return 0;
 }
+
