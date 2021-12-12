@@ -426,6 +426,78 @@ int main()
             break;
 
 
+        case 16:{
+            cout << "Problema 16" << endl ;
+            cout<<endl;
+            cout<<"La serie de Collatz se conforma con la siguiente regla: sea n un elemento de la serie,"<<endl;
+            cout<<"si n es par, el siguiente elemento es n/2, y si n es impar, el siguiente elemento es 3n+1."<<endl;
+            cout<<"Escriba un programa que reciba un número k y calcule cual es el elemento inicial j (semilla), menor"<<endl;
+            cout<<"que k, que produce la serie más larga y diga cuantos términos m tiene la serie."<<endl;
+            int N,B,C,D,A,semilla,contador;
+            cout << endl << " Ingrese un numero k: " ;
+            cin >> N ; // N numero ingresado k por usuario
+            cout << endl ;
+
+            for( int i = 1 ; i < N ; i++ ){
+
+                    B = i ;
+                    C = 0 ;
+
+                    do{
+
+                    if( B %2 == 0 ){
+                    B = B /2 ;
+
+                    }
+                    else if( B %2 != 0 ){
+                        B = (3*B)+1 ;
+                    }
+
+                         C++ ;
+                         D = C ;
+
+                    }while(B != 1) ;
+
+                    if( A > D ){
+                        semilla = i-1 ;
+                        A = C ;
+                    }
+                    else if( D > A ){
+                        A = D ;
+                    }
+                    } //final for
+
+            cout << " Semilla: " << semilla << endl << endl ;
+
+            do{
+
+                if( semilla %2 == 0 ){
+                semilla = semilla /2 ;
+                cout << " " << semilla ;
+                }
+                else if( semilla %2 != 0 ){
+                semilla = (3*semilla)+1 ;
+                cout << " " << semilla ;
+                 }
+
+                contador++ ;
+                 }while(semilla != 1) ;
+
+                cout << endl << endl << " Terminos: " << contador << endl ;
+
+                cout<<endl;
+                cout<<"¿Desea validar otro programa?, oprima la letra 'Y' si desea continuar, oprima la letra 'N' si desea salir :";
+                cin>>Con;
+                if (Con=='Y'||Con=='y'){
+                    continuar=true;
+                }
+                else continuar=false;
+
+
+
+        } // final caso 16
+        break;
+
 
 
 
